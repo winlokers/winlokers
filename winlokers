@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rand = new Random();
+            int i = rand.Next(10);
+            int count = 1;
+
+            Console.WriteLine("0-9");
+            int a = Convert.ToInt32(Console.ReadLine());
+            while (count <= 3)
+            {
+                if (i == a)
+                {
+                    Console.WriteLine("DA" + a);
+                    break;
+                }
+                else
+                {
+                    count++;
+                    if (count == 4)
+                    {
+                        Console.WriteLine("Net" + i);
+                        break;
+                    }
+                    Console.WriteLine("Net" + count);
+                    a = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}
